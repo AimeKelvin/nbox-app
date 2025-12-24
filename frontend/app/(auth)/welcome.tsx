@@ -6,6 +6,7 @@ import { colors, spacingX, spacingY } from '@/constants/theme'
 import { verticalScale } from '@/utils/styling'
 import Animated, { FadeIn } from 'react-native-reanimated'
 import Button from '@/components/Button'
+import { router } from 'expo-router'
 
 const WelcomeScreen = () => {
   return (
@@ -26,7 +27,7 @@ const WelcomeScreen = () => {
       <Typo color={colors.white} size={18}>
         Stay Connected with Your Loved Ones Anytime, Anywhere.
       </Typo>
-<Button loading={false}>
+<Button loading={false} onPress={()=>router.push('/(auth)/register')}>
       <Typo color={colors.white} size={20} fontWeight={'bold'}>
         Get Started
       </Typo>
